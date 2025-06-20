@@ -1,13 +1,10 @@
 
-
 CREATE COMPUTE MODULE CI_CD_Jenkins_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		 CALL CopyEntireMessage();
 		RETURN TRUE;
 	END;
-
-
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		--added webhook
 		SET OutputRoot = InputRoot;
